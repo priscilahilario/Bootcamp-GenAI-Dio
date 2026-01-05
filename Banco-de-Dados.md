@@ -4,6 +4,13 @@
 
 --------------------------------------------------------------------------------------------------------------------
 
+### 🛠 Tecnologias Utilizadas
+* ![PHP](https://img.shields.io/badge/php-%23777BB1.svg?style=for-the-badge&logo=php&logoColor=white)
+* ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+* ![phpMyAdmin](https://img.shields.io/badge/phpMyAdmin-%23F8981D.svg?style=for-the-badge&logo=phpMyAdmin&logoColor=white)
+
+  ------------------------------------------------------------------------------------------------------------------
+
 ## Códigos Usados 
 
 ### Create, Insert into, select
