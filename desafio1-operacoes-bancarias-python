@@ -1,0 +1,51 @@
+# Desafio 1/2 Operações Bancárias com Python, Excel e SQL
+
+  ## Código 1
+  
+entrada = input().strip()
+
+def descrever_uso(nome):
+    # Verifica cada opção e retorna a descrição exata solicitada
+    if nome == "Relatorio de juros em planilha Excel":
+        return "Calculo de juros sobre saldos usando colunas da planilha"
+
+    elif nome == "Tabela de clientes com limite de credito":
+        return "Lista dados de clientes e campo com limite de credito"
+
+    elif nome == "Consulta SQL de saldo por cliente":
+        return "Filtra tabela de contas para mostrar saldo de cada cliente"
+
+    elif nome == "Consulta SQL de historico de transacoes":
+        return "Usa SQL para buscar transacoes antigas de uma conta"
+
+    # Caso a entrada não corresponda a nenhuma opção acima
+    else:
+        return "Tecnica desconhecida"
+
+print(descrever_uso(entrada))
+
+_______________________________________________________________________________________________________________________________________________________________________________
+          
+          ## Código 2 
+
+          entrada = input().strip()
+
+def descrever_uso(nome):
+    # Verifica cada opção e retorna a descrição específica para este desafio
+    if nome == "Planilha Excel de simulacao de parcelas de emprestimo":
+        return "Calcula valor das parcelas com juros sobre o emprestimo"
+
+    elif nome == "Relatorio em Excel com resumo de gastos do cliente":
+        return "Mostra resumo mensal dos gastos do cliente no banco"
+
+    elif nome == "Consulta SQL com total de compras no cartao":
+        return "Soma compras registradas no cartao em uma tabela"
+
+    elif nome == "Consulta SQL listando emprestimos em aberto":
+        return "Retorna emprestimos ativos para analise de risco"
+
+    # Caso a entrada não corresponda a nenhuma das opções válidas
+    else:
+        return "Tecnica desconhecida"
+
+print(descrever_uso(entrada))
