@@ -81,3 +81,119 @@ nome_destinatario = input()
 print(nome_destinatario.upper())
 
 ```
+
+
+## 💰 Desafio: Cálculo de Saldo Diário de Lançamentos Bancários
+
+### 📖 Contexto
+Você faz parte da equipe de tecnologia de um grande banco e recebeu uma missão importante: ajudar o setor financeiro a organizar rapidamente os lançamentos diários de despesas e receitas.  
+
+Cada lançamento é registrado como uma string contendo o tipo (**D** para despesa, **R** para receita) seguido do valor em reais, separados por espaço.  
+
+Sua tarefa é criar uma função que, ao receber uma lista desses lançamentos em uma única linha, calcule o **saldo final do dia**.  
+O saldo é a soma de todas as receitas menos a soma de todas as despesas.  
+
+O resultado deve ser apresentado com **duas casas decimais**, mesmo que o valor seja inteiro.  
+Não utilize bibliotecas externas.
+
+---
+
+### 🎯 Objetivo
+- Ler uma linha contendo lançamentos separados por vírgula.  
+- Processar cada lançamento conforme o tipo e valor.  
+- Calcular o saldo final do dia.  
+- Imprimir o saldo com duas casas decimais.  
+
+---
+
+### 📥 Entrada
+- Uma única linha contendo lançamentos separados por vírgula.  
+- Cada lançamento é composto por uma letra (**D** ou **R**) seguida de um espaço e um valor decimal positivo.  
+
+### 📤 Saída
+- Uma única linha contendo o saldo final do dia, com duas casas decimais.  
+
+---
+
+### 🖥️ Exemplo de Código em Python
+
+```python
+def calcular_saldo():
+    # Lê a linha de entrada
+    entrada = input().strip()
+    
+    # Divide os lançamentos separados por vírgula
+    lancamentos = entrada.split(",")
+    
+    saldo = 0.0
+    
+    # Processa cada lançamento
+    for lancamento in lancamentos:
+        tipo, valor_str = lancamento.strip().split()
+        valor = float(valor_str)
+        
+        if tipo == "R":
+            saldo += valor
+        elif tipo == "D":
+            saldo -= valor
+    
+    # Imprime o saldo final com duas casas decimais
+    print(f"{saldo:.2f}")
+
+# Executa a função
+calcular_saldo()
+
+```
+
+## 🏦 Desafio: Remoção de Transações Duplicadas no Extrato Bancário
+
+### 📖 Contexto
+O Banco ByteSafe é conhecido por sua eficiência digital, mas recentemente um bug no sistema causou a duplicação de algumas transações em seu extrato online.  
+
+Como analista de dados do banco, você foi encarregado de criar uma ferramenta que ajude a identificar e remover essas inconsistências.  
+
+Cada linha do extrato é uma sequência de identificadores de transações, separados por espaço, e pode conter transações repetidas.  
+Sua missão é garantir que cada transação apareça apenas **uma vez**, mantendo a ordem da primeira ocorrência.  
+
+Assim, o extrato ficará limpo e sem duplicatas, facilitando a conferência dos clientes e a auditoria do banco.
+
+---
+
+### 🎯 Objetivo
+Implemente uma função que:
+- Receba uma string com identificadores de transações separados por espaço.  
+- Retorne uma nova string, também separada por espaço, contendo apenas a primeira ocorrência de cada transação.  
+- Preserve a ordem original das transações.  
+- Não utilize bibliotecas externas para manipulação de listas ou conjuntos.  
+
+---
+
+### 📥 Entrada
+- Uma única linha contendo identificadores de transações separados por espaço.  
+- Cada identificador é uma sequência de caracteres alfanuméricos sem espaços.  
+
+### 📤 Saída
+- Uma única linha contendo os identificadores de transações, separados por espaço, sem repetições e na ordem da primeira ocorrência.  
+
+---
+
+### 🖥️ Exemplo de Código em Python
+
+```
+# Leitura da linha de identificadores de transações
+entrada = input()
+
+# Cria uma lista com as transações separadas por espaço
+transacoes = entrada.split()
+
+# Lista para armazenar apenas a primeira ocorrência
+transacoes_unicas = []
+
+# Percorre cada transação e adiciona à lista apenas se ainda não estiver presente
+for t in transacoes:
+    if t not in transacoes_unicas:
+        transacoes_unicas.append(t)
+
+# Imprime o resultado sem duplicatas
+print(' '.join(transacoes_unicas))
+
